@@ -35,6 +35,7 @@
 
         @yield('title')
         @yield('table')
+        @yield('clients')
 
     </div>
 

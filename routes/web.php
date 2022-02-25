@@ -17,8 +17,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/test2', function () {
-    echo 'ici';
-    return view('test2');
-});
+Route::get('/clients', 'App\Http\Controllers\ClientsController@list');
 

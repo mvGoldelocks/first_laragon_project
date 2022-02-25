@@ -49,7 +49,7 @@
                             <li>Help center access</li>
                         </ul>
                         <a href="/test2">  ici</a>
-                        <form action="/test2" method="GET" enctype="multipart/form-data">
+                        <form action="/clients" method="GET" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <input type="text" class="w-50 " name="name" id="name">
                             </div>
