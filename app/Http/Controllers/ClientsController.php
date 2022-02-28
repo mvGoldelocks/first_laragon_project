@@ -7,16 +7,21 @@ use Illuminate\Http\Request;
 class ClientsController extends Controller
 {
     //
-    public function list()
+    public function list($nickname)
     {
-        $clients = [
+
+        $result = $nickname.'Olelele';
+
+        /*$clients = [
             'Jean',
             'Louis',
             'Pat'
-        ];
+        ];*/
 
-        return view('clients', [
+       /* return view('clients', [
             'clients' => $clients
-        ]);
+        ]);*/
+
+        return  $result;
     }
 }

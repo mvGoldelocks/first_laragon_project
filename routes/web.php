@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\ClientsController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +20,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/clients', 'App\Http\Controllers\ClientsController@list');
+Route::get('/clients', function () {
+    $tasks_controller = new ClientsController;
+    $articleName = $tasks_controller->list($_GET['nick']);
+    $data = $articleName;
+  return view('/ContenuClients')->with('try', $data);
+});
 
